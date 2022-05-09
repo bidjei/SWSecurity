@@ -8,9 +8,6 @@ if object_id('SWSecurity.RealmViewPolicy') is not null
 	end;
 
 begin transaction;
-	if (select 1 from Sys.Schemas where [Name] = 'SWSecurity') is null
-		create schema [SWSecurity];
-go
 	create security policy [SWSecurity].[RealmViewPolicy];
 	create table [SWSecurity].[Realms] (
 		[Id] uniqueidentifier not null

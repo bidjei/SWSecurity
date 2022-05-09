@@ -60,6 +60,7 @@ go
 	-- endregion [Assert]
 
 	clean:
+		drop table if exists [dbo].[Save_First_FM];
 		delete from [dbo].[Xs_Quote_Master] where [Formula_Name] = 'First_FM';
 		delete from [dbo].[xs_Formula_Steps] where [Formula_Name] = 'First_FM';
 		delete from [dbo].[xs_Formula_Master] where [Formula_Name] = 'First_FM';
